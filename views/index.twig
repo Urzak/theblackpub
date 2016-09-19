@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The Black Pub</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	{% block styles %}{% endblock %}
+</head>
+<body>
+	<div class="menu-wrapper">
+		<div id="nav">
+			<img src="img/logo.png" id="fixed-area2">
+		<ul>
+			<li><a {% if var == "home" %} class="active"{% endif %} href="index.php">Home</a></li>
+			<li><a {% if var == "about" %} class="active"{% endif %} href="about.php">About us</a></li>
+			<li><a {% if var == "events" %} class="active"{% endif %} href="events.php">events</a></li>
+			<li><a {% if var == "boutique" %} class="active"{% endif %} href="boutique.php">boutique</a></li>
+			<li><a {% if var == "gallery" %} class="active"{% endif %} href="gallery.php">gallery</a></li>
+			<li><a {% if var == "contact" %} class="active"{% endif %} href="contact.php">reserve</a></li>
+		</ul>
+		</div>
+	</div>
+	
+	<div id="fixed-area">
+		{# <img src="http://placehold.it/30x150/c2ad63/ffffff"> #}
+		<a href=""><img src="img/facebook-logo.png"></a>
+		<a href=""><img src="img/instagram-logo.png"></a>
+		<a href=""><img src="img/twitter-logo.png"></a>
+		<a href=""><img src="img/tripadvisor-16.png"></a>
+		<a href=""><img src="img/menu-logo.png"></a>
+	</div>
+	<div class="content">
+		{% block content %}{% endblock %}
+	</div>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	{% block scripts %}{% endblock %}
+</body>
+</html>

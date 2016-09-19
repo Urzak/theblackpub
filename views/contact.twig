@@ -1,0 +1,49 @@
+{% include 'index.twig' with {'var': 'contact'} %}
+{% block content %}
+	<div class="container">
+		<div class="left">
+			<div id="map"></div>
+		</div>
+		<div class="right">
+			<br><br>
+			Make your reservation
+			<br><br>
+			<form>
+				<input class="input-css" placeholder="Name"></input><br><br>
+				<input class="input-css" placeholder="E-mail"></input><br><br>
+				<textarea class="input-css" placeholder="Message" rows="10"></textarea><br><br>
+			</form>
+		</div>
+	</div>
+	{# <div id="mapa">
+		<div id="map"></div>
+	</div>
+	<div id="contacto"> #}
+		
+	</div>
+{% endblock %}
+
+{% block scripts %}
+	<script>
+      function initMap() {
+        var myLatLng = {lat: 21.149254244661698, lng: -86.82002848704722};
+
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          scrollwheel: false,
+          zoom: 18
+        });
+
+        // Create a marker and set its position.
+        var marker = new google.maps.Marker({
+          map: map,
+          position: myLatLng,
+          title: 'The Black Pub'
+        });
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3G6xUBUjX4zKAZKSUuvsOrnIyVWG-idE&callback=initMap"
+        async defer></script>
+{% endblock %}

@@ -1,0 +1,42 @@
+<nav id="navbar" class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button class="hamburger hamburger--collapse js-hamburger hidden" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <img class="logo-black" src="assets/img/logo.png" alt="">
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <div class="center">
+          <li><a href="index.php">   <div {% if local.title == "Home"     %} class="active" {% endif %}> Home</div></a></li>
+          <li><a href="about.php">   <div {% if local.title == "About"    %} class="active" {% endif %}> About Us</div></a></li>
+          <li><a href="events.php">  <div {% if local.title == "Events"   %} class="active" {% endif %}> Events</div></a></li>
+          <li><a href="boutique.php"><div {% if local.title == "Boutique" %} class="active" {% endif %}> Boutique</div></a></li>
+          <li><a href="gallery.php"> <div {% if local.title == "Galley"   %} class="active" {% endif %}> Gallery</div></a></li>
+          <li><a href="contact.php"> <div {% if local.title == "Contact"  %} class="active" {% endif %}> Reserve</div></a></li>
+
+
+
+
+
+
+        </div>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div id="fixed-area">
+	{# <img src="http://placehold.it/30x150/c2ad63/ffffff"> #}
+	<a href=""><img src="assets/img/facebook-logo.png"></a>
+	<a href=""><img src="assets/img/instagram-logo.png"></a>
+	<a href=""><img src="assets/img/twitter-logo.png"></a>
+	<a href=""><img src="assets/img/tripadvisor-16.png"></a>
+	<a href=""><img src="assets/img/menu-logo.png"></a>
+</div>

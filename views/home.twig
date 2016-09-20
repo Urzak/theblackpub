@@ -2,28 +2,30 @@
 {% block styles %}
   <link rel="stylesheet" href="assets/masterslider/style/masterslider.css">
   <link rel='stylesheet' href="assets/masterslider/skins/default/style.css">
+
+
 {% endblock %}
 
 {% block content %}
     <div class="master-slider ms-skin-default" id="masterslider">    
       {% for slide in local.slider %}
           <div class="ms-slide">
-            <img src="assets/masterslider/style/blank.gif" data-src="{{ slide }}" alt="lorem ipsum dolor sit"/>
+            <img src="assets/masterslider/style/blank.gif" data-src="{{ slide }}" />
           </div>
       {% endfor %}
     </div>
 {% endblock %}
 
 {% block scripts %}
-	 <script src="assets/masterslider/masterslider.min.js"></script>
+	<script src="assets/masterslider/masterslider.min.js"></script>
+
     <script type="text/javascript">
     var slider = new MasterSlider();
     slider.control('arrows');     
     slider.control('scrollbar' , {dir:'h',color:'#333'});
     slider.setup('masterslider' , {
       width:1300,
-      height: 100,
-      layout: "autofill",
+      layout: "fullscreen",
       space:0,
       view:'parallaxMask'
     });

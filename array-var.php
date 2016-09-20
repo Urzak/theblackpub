@@ -5,11 +5,32 @@ $globals = array(
 	);
 
 $home = array(
-	'Title' => 'Home',
+	'title' => 'Home',
 	'slider' => array(
-				'assets/img/home.jpg', 
+				'assets/img/slider-1.png', 
 				'assets/img/about.jpg', 
-			)
+			),
+	
+	);
+$about = array(
+	'title' => 'About'
+	
+	);
+$events = array(
+	'title' => 'Events'
+	
+	);
+$boutique = array(
+	'title' => 'Boutiqe'
+	
+	);
+$gallery = array(
+	'title' => 'Gallery'
+	
+	);
+$reserve = array(
+	'title' => 'Reserve'
+	
 	);
 
 ?>

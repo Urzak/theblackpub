@@ -4,41 +4,57 @@
 	border none
 	border-radius 0px
 	font-family: 'Libre Baskerville', serif;
-	.navbar-nav
-		width 100%
-		.center
-			display block
-			text-align -webkit-center
-			li
-				display inline-block
-				height 100%
-				padding 39px 20px
-				+for_breakpoint(mobile)
-					padding 5px
-					width 100%
-				+for_breakpoint(tablet)
-					padding 5px
-					width 100%
-				a
-					font-size 1.3em
-					color white !important
-					&:focus
-						text-decoration none
-					&:hover
-						text-decoration none
-						opacity 0.5
-					.active
-						border-bottom 2px solid #c4af64
-						+for_breakpoint(mobile)
-							border-bottom none
-							color #c4c4c4
-							
-
+	margin-bottom 0px
+	.navbar-collapse
+		+for_breakpoint(mobile)
+			border-top 2px solid #c4af64
+		+for_breakpoint(tablet)
+			border-top 2px solid #c4af64
+		.navbar-nav
+			width 100%
+			margin 0px
+			.center
+				display block
+				text-align -webkit-center
+				li
+					display inline-block
+					height 100%
+					padding 39px 20px
+					+for_breakpoint(desktop)
+						padding 39px 7px
+					+for_breakpoint(mobile)
+						padding 5px
+						width 100%
+					+for_breakpoint(tablet)
+						padding 5px
+						width 100%						
+					a
+						font-size 1.3em
+						color white !important
+						&:focus
+							text-decoration none
+						&:hover
+							text-decoration none
+							opacity 0.5
+						.active
+							border-bottom 2px solid #c4af64
+							+for_breakpoint(mobile)
+								border-bottom none
+								color #c4c4c4
+							+for_breakpoint(tablet)
+								border-bottom none
+								color #c4c4c4	
 	.logo-black
 		position absolute
-		transform translate(100px,-1px)	
+		transform translate(40px,-1px)	
 		z-index 1
 		+for_breakpoint(mobile)
 			width 60px
-			transform translate(30px,-1px)	
+			transform translate(30px,-1px)
+		+for_breakpoint(tablet)
+			width 60px
+			transform translate(30px,-1px)
+		+for_breakpoint(desktop)
+			width 100px
+			transform translate(10px,-1px)	
 			

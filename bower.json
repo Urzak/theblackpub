@@ -1,0 +1,20 @@
+{
+  "name": "TheBlackPub",
+  "description": "The Black Pub Website 2016",
+  "main": "gulpfile.js",
+  "authors": [
+    "Urzak"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Urzak/theblackpub",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "social-feed": "^0.1.2"
+  }
+}

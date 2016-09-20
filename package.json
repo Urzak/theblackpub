@@ -1,12 +1,12 @@
 {
-  "name": "TheBlackPb",
+  "name": "TheBlackPub",
   "version": "1.0.0",
   "description": "The Black Pub Website 2016",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Mosh",
+  "author": "Urzak",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "2.6.5",

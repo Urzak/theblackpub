@@ -1,5 +1,64 @@
 {% include 'index.twig' with {'var': 'gallery'} %}
+{% block styles %}
+	<!-- Social-feed css -->
+	<link href="bower_components/social-feed/css/jquery.socialfeed.css" rel="stylesheet" type="text/css">
+	<!-- font-awesome for social network icons -->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
-	gallery
+	<div class="social-feed-container"></div>
+{% endblock %}
+
+{% block scripts %}
+	<!-- Codebird.js - required for TWITTER -->
+	<script src="bower_components/codebird-js/codebird.js"></script>
+	<!-- doT.js for rendering templates -->
+	<script src="bower_components/doT/doT.min.js"></script>
+	<!-- Moment.js for showing "time ago" and/or "date"-->
+	<script src="bower_components/moment/min/moment.min.js"></script>
+	<!-- Moment Locale to format the date to your language (eg. italian lang)-->
+	<script src="bower_components/moment/locale/it.js"></script>
+	<!-- Social-feed js -->
+	<script src="bower_components/social-feed/js/jquery.socialfeed.js"></script>
+	<script type="text/javascript">
+		$('.social-feed-container').socialfeed({
+			// FACEBOOK
+			facebook:{
+				accounts: ['@theblackpub','!theblackpub'],
+				limit: 2,
+				access_token: 'YOUR_FACEBOOK_ACCESS_TOKEN'
+			},
+
+			// TWITTER
+			twitter:{
+				accounts: ['@theblackpub'],
+				limit: 2,
+				consumer_key: 'YOUR_CONSUMER_KEY',
+				consumer_secret: 'YOUR_CONSUMER_SECRET_KEY'
+			},
+
+			// INSTAGRAM
+			instagram:{
+				accounts: ['@theblackpub','#theblackpub'],
+				limit: 2,
+				client_id: 'YOUR_INSTAGRAM_CLIENT_ID',
+				access_token: 'YOUR_INSTAGRAM_ACCESS_TOKEN'
+			}
+
+			// GENERAL SETTINGS
+			length:400,
+			show_media:true,
+			media_min_width: 300,
+			update_period: 5000,
+			template: "tweet.html",
+			date_format: "ll",
+			moderation: function(content) {
+				return  (content.text) ? content.text.indexOf('?¡') == -1 : true;
+			},
+			callback: function() {
+				console.log("All posts collected!");
+			}
+		});
+	</script>
 {% endblock %}

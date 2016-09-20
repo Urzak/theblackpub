@@ -1,25 +1,21 @@
 {% include 'index.twig' with {'var': 'contact'} %}
 {% block content %}
-	<div class="container">
-		<div class="left">
-			<div id="map"></div>
+	<div id="contact">
+		<div class="cont-contact">
+			<div class="left">
+				<div id="map"></div>
+			</div>
+			<div class="right">
+				<br><br>
+				Make your reservation
+				<br><br>
+				<form>
+					<input class="input-css" placeholder="Name"></input><br><br>
+					<input class="input-css" placeholder="E-mail"></input><br><br>
+					<textarea class="input-css" placeholder="Message" rows="10"></textarea><br><br>
+				</form>
+			</div>
 		</div>
-		<div class="right">
-			<br><br>
-			Make your reservation
-			<br><br>
-			<form>
-				<input class="input-css" placeholder="Name"></input><br><br>
-				<input class="input-css" placeholder="E-mail"></input><br><br>
-				<textarea class="input-css" placeholder="Message" rows="10"></textarea><br><br>
-			</form>
-		</div>
-	</div>
-	{# <div id="mapa">
-		<div id="map"></div>
-	</div>
-	<div id="contacto"> #}
-		
 	</div>
 {% endblock %}
 
@@ -36,10 +32,16 @@
         });
 
         // Create a marker and set its position.
+        var imagen = {
+        	url: 'assets/img/PIN.svg',
+        	size: new google.maps.Size(40, 52),
+        	anchor: new google.maps.Point(15,45)
+        }
         var marker = new google.maps.Marker({
           map: map,
           position: myLatLng,
-          title: 'The Black Pub'
+          title: 'The Black Pub',
+          icon: imagen
         });
       }
 

@@ -4,10 +4,13 @@
 	<link href="bower_components/social-feed/css/jquery.socialfeed.css" rel="stylesheet" type="text/css">
 	<!-- font-awesome for social network icons -->
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="bower_components/justifiedGallery/dist/css/justifiedGallery.css" />
 {% endblock %}
 
 {% block content %}
-	<div class="social-feed-container"></div>
+	<div id="image-container">
+		<div class="social-feed-container"></div>
+	</div>
 {% endblock %}
 
 {% block scripts %}
@@ -25,33 +28,38 @@
 		$('.social-feed-container').socialfeed({
 			// FACEBOOK
 			facebook:{
-				accounts: ['@theblackpub','!theblackpub'],
-				limit: 2,
-				access_token: 'YOUR_FACEBOOK_ACCESS_TOKEN'
+				accounts: ['@theblackpub'],
+				limit: 4,
+				access_token: '150849908413827|a20e87978f1ac491a0c4a721c961b68c'
 			},
 
-			// TWITTER
+			// // TWITTER
 			twitter:{
 				accounts: ['@theblackpub'],
 				limit: 2,
-				consumer_key: 'YOUR_CONSUMER_KEY',
-				consumer_secret: 'YOUR_CONSUMER_SECRET_KEY'
+				consumer_key: 'qzRXgkI7enflNJH1lWFvujT2P',
+				consumer_secret: '8e7E7gHuTwyDHw9lGQFO73FcUwz9YozT37lEvZulMq8FXaPl8O'
 			},
-
+			// GOOGLEPLUS
+            google: {
+                accounts: ['#theblackpub'],
+                limit: 2,
+                access_token: 'AIzaSyC3G6xUBUjX4zKAZKSUuvsOrnIyVWG-idE'
+            },
 			// INSTAGRAM
-			instagram:{
-				accounts: ['@theblackpub','#theblackpub'],
-				limit: 2,
-				client_id: 'YOUR_INSTAGRAM_CLIENT_ID',
-				access_token: 'YOUR_INSTAGRAM_ACCESS_TOKEN'
-			}
+			// instagram:{
+			// 	accounts: ['theblackpub','597751959','1521663745', '2116850252', '#theblackpub'],
+			// 	limit: 2,
+			// 	client_id: '8096507c392b46cbb7303220237b586e',
+			// 	access_token: ''
+			// },
 
 			// GENERAL SETTINGS
 			length:400,
 			show_media:true,
 			media_min_width: 300,
-			update_period: 5000,
-			template: "tweet.html",
+			// update_period: 50000,
+			template: "views/tweet.html",
 			date_format: "ll",
 			moderation: function(content) {
 				return  (content.text) ? content.text.indexOf('?¡') == -1 : true;
@@ -61,4 +69,8 @@
 			}
 		});
 	</script>
+	<!--script src="bower_components/justifiedGallery/src/js/justifiedGallery.js"></script>
+	<script>
+		$(".social-feed-container").justifiedGallery();
+	</script-->
 {% endblock %}

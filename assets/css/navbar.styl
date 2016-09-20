@@ -1,0 +1,45 @@
+#navbar
+	position relative
+	background-image url('../assets/img/brickwall.jpg')
+	border none
+	border-radius 0px
+	font-family: 'Libre Baskerville', serif;
+
+	.navbar-nav
+		width 100%
+		.center
+			display block
+			text-align -webkit-center
+			li
+				display inline-block
+				height 100%
+				padding 39px 20px
+				+for_breakpoint(mobile)
+					padding 5px
+					width 100%
+				+for_breakpoint(tablet)
+					padding 5px
+					width 100%
+				a
+					font-size 1.3em
+					color white !important
+					&:focus
+						text-decoration none
+					&:hover
+						text-decoration none
+						opacity 0.5
+					.active
+						border-bottom 2px solid #c4af64
+						+for_breakpoint(mobile)
+							border-bottom none
+							color #c4c4c4
+							
+
+	.logo-black
+		position absolute
+		transform translate(100px,-1px)	
+		z-index 1
+		+for_breakpoint(mobile)
+			width 60px
+			transform translate(30px,-1px)	
+			

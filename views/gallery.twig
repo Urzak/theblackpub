@@ -23,35 +23,36 @@
 	<!-- Moment Locale to format the date to your language (eg. italian lang)-->
 	<script src="bower_components/moment/locale/it.js"></script>
 	<!-- Social-feed js -->
+	<script src="bower_components/justifiedGallery/src/js/justifiedGallery.js"></script>
 	<script src="bower_components/social-feed/js/jquery.socialfeed.js"></script>
 	<script type="text/javascript">
 		$('.social-feed-container').socialfeed({
 			// FACEBOOK
 			facebook:{
 				accounts: ['@theblackpub'],
-				limit: 4,
+				limit: 8,
 				access_token: '150849908413827|a20e87978f1ac491a0c4a721c961b68c'
 			},
 
 			// // TWITTER
-			twitter:{
-				accounts: ['@theblackpub'],
-				limit: 2,
-				consumer_key: 'qzRXgkI7enflNJH1lWFvujT2P',
-				consumer_secret: '8e7E7gHuTwyDHw9lGQFO73FcUwz9YozT37lEvZulMq8FXaPl8O'
-			},
+			// twitter:{
+			// 	accounts: ['@theblackpub'],
+			// 	limit: 2,
+			// 	consumer_key: 'qzRXgkI7enflNJH1lWFvujT2P',
+			// 	consumer_secret: '8e7E7gHuTwyDHw9lGQFO73FcUwz9YozT37lEvZulMq8FXaPl8O'
+			// },
 			// GOOGLEPLUS
-            google: {
-                accounts: ['#theblackpub'],
-                limit: 2,
-                access_token: 'AIzaSyC3G6xUBUjX4zKAZKSUuvsOrnIyVWG-idE'
-            },
+            // google: {
+            //     accounts: ['#theblackpub'],
+            //     limit: 2,
+            //     access_token: 'AIzaSyC3G6xUBUjX4zKAZKSUuvsOrnIyVWG-idE'
+            // },
 			// INSTAGRAM
 			// instagram:{
-			// 	accounts: ['theblackpub','597751959','1521663745', '2116850252', '#theblackpub'],
+			// 	accounts: ['&368569416'],
 			// 	limit: 2,
-			// 	client_id: '8096507c392b46cbb7303220237b586e',
-			// 	access_token: ''
+			// 	// client_id: '8096507c392b46cbb7303220237b586e',
+			// 	access_token: '368569416.aeeff59.3b580ac13b424846b8aff2bb7f34e0d2'
 			// },
 
 			// GENERAL SETTINGS
@@ -66,11 +67,14 @@
 			},
 			callback: function() {
 				console.log("All posts collected!");
+				$(".social-feed-container").justifiedGallery({
+					rowHeight: 200,
+					lastRow: 'center',
+					margins: 5,
+					border: 100,
+					captions: true
+				});
 			}
 		});
 	</script>
-	<!--script src="bower_components/justifiedGallery/src/js/justifiedGallery.js"></script>
-	<script>
-		$(".social-feed-container").justifiedGallery();
-	</script-->
 {% endblock %}

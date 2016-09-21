@@ -13,23 +13,23 @@ $home = array(
 	
 	);
 $about = array(
-	'title' => 'About'
+	'title' => 'About',
 	
 	);
 $events = array(
-	'title' => 'Events'
+	'title' => 'Events',
 	
 	);
 $boutique = array(
-	'title' => 'Boutiqe'
+	'title' => 'Boutique',
 	
 	);
 $gallery = array(
-	'title' => 'Gallery'
+	'title' => 'Gallery',
 	
 	);
 $reserve = array(
-	'title' => 'Reserve'
+	'title' => 'Reserve',
 	
 	);
 

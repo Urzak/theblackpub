@@ -1,14 +1,14 @@
 <?php 
 require_once './vendor/autoload.php';
-require_once 'array-var.php';
+require 'array-var.php';
 
 $loader = new Twig_Loader_Filesystem('./views');
 $twig = new Twig_Environment($loader, []);
 
 $params = array(
-			'local' => $home,
+			'local' => $gallery,
 			'global' => $globals
 		);
 ;
 
-echo $twig->render('gallery.twig');
+echo $twig->render('gallery.twig',$params);

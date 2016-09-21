@@ -1,4 +1,19 @@
-{% include 'index.twig' with {'var': 'about'} %}
+{% include 'index.twig' %}
+{% block styles %}{% endblock %}
 {% block content %}
-	<center><img src="assets/img/AboutUs.jpg" style="width: 90%"></center>
+<div id="about" class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="margen">
+				Hola yo soy el about
+				<div class="q-1"></div>
+				<div class="q-2"></div>
+				<div class="q-3"></div>
+				<div class="q-4"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
 {% endblock %}
+{% block scripts %}{% endblock %}

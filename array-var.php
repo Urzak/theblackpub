@@ -21,8 +21,7 @@ $events = array(
 	
 	);
 $boutique = array(
-	'title' => 'Boutique',
-	
+	'title' => 'Boutique'
 	);
 $gallery = array(
 	'title' => 'Gallery',

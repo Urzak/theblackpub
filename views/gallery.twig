@@ -4,10 +4,13 @@
 	<link href="bower_components/social-feed/css/jquery.socialfeed.css" rel="stylesheet" type="text/css">
 	<!-- font-awesome for social network icons -->
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="bower_components/justifiedGallery/dist/css/justifiedGallery.css" />
 {% endblock %}
 
 {% block content %}
-	<div class="social-feed-container"></div>
+	<div id="galeria">
+		<div class="social-feed-container"></div>
+	</div>
 {% endblock %}
 
 {% block scripts %}
@@ -20,44 +23,57 @@
 	<!-- Moment Locale to format the date to your language (eg. italian lang)-->
 	<script src="bower_components/moment/locale/it.js"></script>
 	<!-- Social-feed js -->
+	<script src="bower_components/justifiedGallery/src/js/justifiedGallery.js"></script>
 	<script src="bower_components/social-feed/js/jquery.socialfeed.js"></script>
 	<script type="text/javascript">
 		$('.social-feed-container').socialfeed({
 			// FACEBOOK
 			facebook:{
-				accounts: ['@theblackpub','!theblackpub'],
-				limit: 2,
-				access_token: 'YOUR_FACEBOOK_ACCESS_TOKEN'
-			},
-
-			// TWITTER
-			twitter:{
 				accounts: ['@theblackpub'],
-				limit: 2,
-				consumer_key: 'YOUR_CONSUMER_KEY',
-				consumer_secret: 'YOUR_CONSUMER_SECRET_KEY'
+				limit: 10,
+				access_token: '548781405313550|9ff6b619e99b1f7dbfda9a0dda939667'
 			},
 
+			// // TWITTER
+			// twitter:{
+			// 	accounts: ['@theblackpub'],
+			// 	limit: 2,
+			// 	consumer_key: 'qzRXgkI7enflNJH1lWFvujT2P',
+			// 	consumer_secret: '8e7E7gHuTwyDHw9lGQFO73FcUwz9YozT37lEvZulMq8FXaPl8O'
+			// },
+			// GOOGLEPLUS
+            // google: {
+            //     accounts: ['#theblackpub'],
+            //     limit: 2,
+            //     access_token: 'AIzaSyC3G6xUBUjX4zKAZKSUuvsOrnIyVWG-idE'
+            // },
 			// INSTAGRAM
-			instagram:{
-				accounts: ['@theblackpub','#theblackpub'],
-				limit: 2,
-				client_id: 'YOUR_INSTAGRAM_CLIENT_ID',
-				access_token: 'YOUR_INSTAGRAM_ACCESS_TOKEN'
-			}
+			// instagram:{
+			// 	accounts: ['&368569416'],
+			// 	limit: 2,
+			// 	// client_id: '8096507c392b46cbb7303220237b586e',
+			// 	access_token: '368569416.aeeff59.3b580ac13b424846b8aff2bb7f34e0d2'
+			// },
 
 			// GENERAL SETTINGS
 			length:400,
 			show_media:true,
 			media_min_width: 300,
-			update_period: 5000,
-			template: "tweet.html",
+			// update_period: 50000,
+			template: "views/tweet.html",
 			date_format: "ll",
 			moderation: function(content) {
 				return  (content.text) ? content.text.indexOf('?¡') == -1 : true;
 			},
 			callback: function() {
 				console.log("All posts collected!");
+				$(".social-feed-container").justifiedGallery({
+					rowHeight: 200,
+					lastRow: 'center',
+					margins: 5,
+					border: 70,
+					captions: true
+				});
 			}
 		});
 	</script>

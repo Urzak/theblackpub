@@ -9,5 +9,4 @@ $params = array(
 			'local' => $boutique,
 			'global' => $globals
 		);
-
 echo $twig->render('boutique.twig',$params);

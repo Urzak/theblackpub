@@ -9,6 +9,5 @@ $params = array(
 			'local' => $gallery,
 			'global' => $globals
 		);
-;
 
 echo $twig->render('gallery.twig',$params);

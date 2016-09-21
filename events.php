@@ -9,6 +9,4 @@ $params = array(
 			'local' => $events,
 			'global' => $globals
 		);
-
-
 echo $twig->render('events.twig',$params);

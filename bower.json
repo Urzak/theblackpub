@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "social-feed": "^0.1.2"
+    "social-feed": "^0.1.2",
+    "justifiedGallery": "justified-gallery#^3.6.3"
   }
 }

@@ -9,6 +9,4 @@ $params = array(
 			'local' => $reserve,
 			'global' => $globals
 		);
-
-
-echo $twig->render('contact.twig',$params);
+echo $twig->render('contact.twig', $params);

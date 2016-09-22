@@ -1,24 +1,60 @@
 {% include 'index.twig' with {'var': 'events'} %}
 {% block content %}
+	<div class="container">
 <div id="events">
-	<div class="row" style="margin: 70px 70px 70px 70px;">
-		<div id="expandme1" class="col-lg-2 border" style="background-color: white; color: black">MONDAY</div>
-		<div id="expandme2" class="col-lg-2 border" style="background-color: black">TUESDAY</div>
-		<div id="expandme3" class="col-lg-2 border" style="background-color: white; color: black">WEDNESDAY</div>
-		<div id="expandme4" class="col-lg-2 border" style="background-color: black">THURSDAY</div>
-		<div id="expandme5" class="col-lg-2 border" style="background-color: white; color: black">FRIDAY</div>
-		<div id="expandme6" class="col-lg-2 border" style="background-color: black">SATURDAY</div>
+	<div class="accordion">
+		<ul>
+			<li>
+				<div> <a href="#">
+				<h2>MONDAY</h2>
+				<p>Content 1</p>
+				</a> </div>
+			</li>
+			<li>
+				<div> <a href="#">
+				<h2>TUESDAY</h2>
+				<p>Content 2</p>
+				</a> </div>
+			</li>
+			<li>
+				<div> <a href="#">
+				<h2>WEDNESDAY</h2>
+				<p>Content 3</p>
+				</a> </div>
+			</li>
+			<li>
+				<div> <a href="#">
+				<h2>THURSDAY</h2>
+				<p>Content 4</p>
+				</a> </div>
+			</li>
+			<li>
+				<div> <a href="#">
+				<h2>FRIDAY</h2>
+				<p>Content 5</p>
+				</a> </div>
+			</li>
+			<li>
+				<div> <a href="#">
+				<h2>SATURDAY</h2>
+				<p>Content 6</p>
+				</a> </div>
+			</li>
+		</ul>
 	</div>
-	<div id="hola" style="background: #EEE; border: 1px solid #900; height: 135px; margin: 70px 70px 70px 70px;">MONDAY</div>
 </div>
+	</div>
 {% endblock %}
 {% block scripts %}
 	<script>
-		$('#hola').hide();
 		$('#expandme1').mouseenter(function(){
-			$('#hola').show('slide');
+			$('#expandme1').animate({
+				"width": "100%"
+			},"slow");
 		}).mouseleave(function(){
-			$('#hola').hide();
+			$('#expandme1').animate({
+				"width": "16%"
+			},"slow");
 		});
 	</script>
 {% endblock %}

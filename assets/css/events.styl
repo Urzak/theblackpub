@@ -1,0 +1,98 @@
+$a-height = calc(100vh - 101.11px)
+$text-offset = calc($a-height - 90px)
+#events
+	// margin: 70px 70px 70px 70px
+	.accordion
+		width: 100%
+		max-width: 1080px
+		height: $a-height
+		overflow: hidden
+		margin: 15px auto
+		ul
+			width: 100%
+			display: table
+			table-layout: fixed
+			margin: 0
+			padding: 0
+			li
+				display: table-cell
+				vertical-align: bottom
+				position: relative
+				width: 16.666%
+				height: $a-height
+				background-repeat: no-repeat
+				background-position: center center
+				transition: all 500ms ease
+				div
+					display: block
+					height: $a-height
+					width: 100%
+					border: 3px solid white
+					a
+						display: block
+						height: $a-height
+						width: 100%
+						position: relative
+						z-index: 3
+						vertical-align: bottom
+						padding: 15px 25px
+						box-sizing: border-box
+						color: #fff
+						text-decoration: none
+						transition: all 200ms ease
+						*
+							opacity: 0
+							margin: 0
+							width: 100%
+							text-overflow: ellipsis
+							position: relative
+							z-index: 5
+							white-space: nowrap
+							overflow: hidden
+							-webkit-transform: translateX(-20px)
+							transform: translateX(-20px)
+							-webkit-transition: all 400ms ease
+							transition: all 400ms ease
+						h2
+							text-overflow: clip
+							opacity: 1
+							font-size: 17px
+							text-transform: uppercase
+							margin-bottom: 2px
+							letter-spacing: -1px
+						p
+							font-size: 13.50px
+			li:nth-child(1)
+				background-image: url("../assets/img/home.jpg")
+			li:nth-child(2)
+				background-image: url("../assets/img/home.jpg")
+			li:nth-child(3)
+				background-image: url("../assets/img/home.jpg")
+			li:nth-child(4)
+				background-image: url("../assets/img/home.jpg")
+			li:nth-child(5)
+				background-image: url("../assets/img/home.jpg")
+			li:nth-child(6)
+				background-image: url("../assets/img/home.jpg")
+				
+			&:hover li
+				width: 8%
+				&:hover
+					width: 60%
+					a
+						background: rgba(0, 0, 0, .4)
+						*
+							opacity: 1
+							-webkit-transform: translateX(0)
+							transform: translateX(0)
+	@media screen and (max-width: 600px)
+		.accordion
+			height: auto
+			ul,ul:hover
+				li,li:hover
+					position: relative
+					display: table
+					table-layout: fixed
+					width: 100%
+					-webkit-transition: none
+					transition: none								

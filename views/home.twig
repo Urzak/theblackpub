@@ -7,13 +7,24 @@
 {% endblock %}
 
 {% block content %}
+<div id="slider">
     <div class="master-slider ms-skin-default" id="masterslider">    
       {% for slide in local.slider %}
           <div class="ms-slide">
             <img src="assets/masterslider/style/blank.gif" data-src="{{ slide }}" />
           </div>
       {% endfor %}
+      <div class="ms-slide">
+        <img src="assets/masterslider/style/blank.gif" data-src="http://placehold.it/1366x768"/>
+      </div>
+      <div class="ms-slide">
+        <img src="assets/masterslider/style/blank.gif" data-src="http://placehold.it/1366x768"/>
+      </div>
+      <div class="ms-slide">
+        <img src="assets/masterslider/style/blank.gif" data-src="http://placehold.it/1366x768"/>
+      </div>
     </div>
+</div>
 {% endblock %}
 
 {% block scripts %}
@@ -24,8 +35,8 @@
     slider.control('arrows');     
     slider.control('scrollbar' , {dir:'h',color:'#333'});
     slider.setup('masterslider' , {
-      width:1300,
-      layout: "fullscreen",
+      width:1366,
+      layout: "autofill",
       space:0,
       view:'parallaxMask'
     });

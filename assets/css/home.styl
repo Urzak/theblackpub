@@ -1,0 +1,9 @@
+$h_slider = calc(100vh - 103px)
+$h_sliderMobile = calc(100vh - 58px)
+
+#slider
+	height $h_slider
+	+for_breakpoint(mobile)
+		height $h_sliderMobile
+	+for_breakpoint(tablet)
+		height $h_sliderMobile

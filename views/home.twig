@@ -14,7 +14,7 @@
             <img src="assets/masterslider/style/blank.gif" data-src="{{ slide }}" />
           </div>
       {% endfor %}
-      <div class="ms-slide">
+      {# <div class="ms-slide">
         <img src="assets/masterslider/style/blank.gif" data-src="http://placehold.it/1366x768"/>
       </div>
       <div class="ms-slide">
@@ -22,7 +22,7 @@
       </div>
       <div class="ms-slide">
         <img src="assets/masterslider/style/blank.gif" data-src="http://placehold.it/1366x768"/>
-      </div>
+      </div> #}
     </div>
 </div>
 {% endblock %}
@@ -38,7 +38,10 @@
       width:1366,
       layout: "autofill",
       space:0,
-      view:'parallaxMask'
+      view:'parallaxMask',
+      keyboard: true,
+      loop: true,
+      autoplay: true
     });
     </script>
 {% endblock %}

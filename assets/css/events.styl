@@ -1,13 +1,16 @@
-$a-height = calc(100vh - 101.11px)
+$a-height = calc(100vh - 103px)
 $text-offset = calc($a-height - 90px)
 #events
-	// margin: 70px 70px 70px 70px
+	// margin: 70px
+	height: $a-height
 	.accordion
 		width: 100%
-		max-width: 1080px
+		max-width: 1024px
 		height: $a-height
 		overflow: hidden
-		margin: 15px auto
+		margin: 0 auto
+		// margin-top: 20px
+		// margin-bottom: 20px
 		ul
 			width: 100%
 			display: table
@@ -21,8 +24,9 @@ $text-offset = calc($a-height - 90px)
 				width: 16.666%
 				height: $a-height
 				background-repeat: no-repeat
-				background-position: center center
+				background-position: center bottom
 				transition: all 500ms ease
+				text-align: center
 				div
 					display: block
 					height: $a-height
@@ -44,7 +48,7 @@ $text-offset = calc($a-height - 90px)
 							opacity: 0
 							margin: 0
 							width: 100%
-							text-overflow: ellipsis
+							// text-overflow: ellipsis
 							position: relative
 							z-index: 5
 							white-space: nowrap
@@ -56,24 +60,27 @@ $text-offset = calc($a-height - 90px)
 						h2
 							text-overflow: clip
 							opacity: 1
-							font-size: 17px
+							font-size: 17.5px
 							text-transform: uppercase
 							margin-bottom: 2px
 							letter-spacing: -1px
+							// text-align: center
 						p
+							padding-top: 30px
 							font-size: 13.50px
+							text-align: center
 			li:nth-child(1)
-				background-image: url("../assets/img/home.jpg")
+				background-image: url("../assets/img/lunes.jpg")
 			li:nth-child(2)
-				background-image: url("../assets/img/home.jpg")
+				background-image: url("../assets/img/martes.jpg")
 			li:nth-child(3)
-				background-image: url("../assets/img/home.jpg")
+				background-image: url("../assets/img/miercoles.jpg")
 			li:nth-child(4)
-				background-image: url("../assets/img/home.jpg")
+				background-image: url("../assets/img/jueves.jpg")
 			li:nth-child(5)
-				background-image: url("../assets/img/home.jpg")
-			li:nth-child(6)
-				background-image: url("../assets/img/home.jpg")
+				background-image: url("../assets/img/viernes.jpg")
+			// li:nth-child(6)
+			// 	background-image: url("../assets/img/home.jpg")
 				
 			&:hover li
 				width: 8%

@@ -8,7 +8,9 @@ $home = array(
 	'title' => 'Home',
 	'slider' => array(
 				'assets/img/slider-1.png', 
-				'assets/img/about.jpg', 
+				'assets/img/Bandas_1366x768.png',
+				'assets/img/BarraLibre_1366x768.png',
+				'assets/img/Come_comoRockstar1366x768.png', 
 			),
 	
 	);

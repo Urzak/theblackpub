@@ -1,71 +1,63 @@
 {% include 'index.twig' with {'var': 'events'} %}
 {% block content %}
-	<div class="container">
+	{# <div class="container"> #}
 <div id="events">
 	<div class="accordion">
 		<ul>
 			<li>
-				<div> <a href="#">
+				<div id="lunes"> <a href="#lunes">
 				<h2>MONDAY</h2>
-				<p>
-					Gourmet PIZZA + WINE $249 
-					Starting at 2 p.m.
-				</p>
+					<p>Gourmet</p> 
+					<p>PIZZA + WINE $249</p>
+					<p>Starting at 2 p.m.</p>
 				</a> </div>
 			</li>
 			<li>
-				<div> <a href="#">
+				<div id="martes"> <a href="#martes">
 				<h2>TUESDAY</h2>
-				<p>
-					Martinis & Mezcal 2 X 1
-					¡Acoustic Sessions!
-					8 to 2 a.m 
-				</p> 
+					<p>Martinis & Mezcal</p>
+					<p>2 X 1</p>
+					<p>¡Acoustic Sessions!</p>
+					<p>8 to 2 a.m. </p>
 				</a> </div>
 			</li>
 			<li>
-				<div> <a href="#">
+				<div id="miercoles"> <a href="#miercoles">
 				<h2>WEDNESDAY</h2>
-				<p>
-					Ladies Night
-					Ron, Vodka, Tequila & Martinis.
-					¡Sweet Emotions!
-				</p>
+					<p>Ladies Night</p>
+					<p>Ron, Vodka, Tequila & Martinis.</p>
+					<p>¡Sweet Emotions!</p>
+					<p>8 to 2 a.m. </p>
 				</a> </div>
 			</li>
 			<li>
-				<div> <a href="#">
+				<div id="jueves"> <a href="#jueves">
 				<h2>THURSDAY</h2>
-				<p>
-					Caribean
-					Margaritas, Mojitos, & Piñas Coladas
-					2 X 1
-					¡The Movil Band!
-				</p>
+					<p>Caribean</p>
+					<p>Margaritas, Mojitos, & Piñas Coladas</p>
+					<p>2 X 1</p>
+					<p>¡The Movil Band!</p>
+					<p>8 to 2 a.m. </p>
 				</a> </div>
 			</li>
 			<li>
-				<div> <a href="#">
+				<div id="viernes"> <a href="#viernes">
 				<h2>FRIDAY</h2>
-				<p>
-					Rock
-					¡The Wholliganz!
-				</p>
+					<p>Rock</p>
+					<p>¡The Wholliganz!</p>
 				</a> </div>
 			</li>
-			<li>
-				<div> <a href="#">
+			{# <li>
+				<div id="sabado"> <a href="#sabado">
 				<h2>SATURDAY</h2>
-				<p>
-					Rock
-					¡The Wholliganz!
-				</p>
+					<p>Rock</p>
+					<p>¡The Wholliganz!</p>
 				</a> </div>
-			</li>
+			</li> #}
 		</ul>
 	</div>
 </div>
-	</div>
+	{# </div> #}
 {% endblock %}
 {% block scripts %}
 	<script>

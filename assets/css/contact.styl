@@ -5,7 +5,8 @@ $ventana = calc(100vh - 103px)
 		-webkit-box-sizing: content-box
 		-moz-box-sizing: content-box
 		box-sizing: content-box
-		padding: 10px 20px
+		margin-top: 10px
+		padding: 15px 20px 10px 20px
 		border: 2px solid #b7b7b7
 		-webkit-border-radius: 6px
 		border-radius: 6px
@@ -21,7 +22,7 @@ $ventana = calc(100vh - 103px)
 		-webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1)
 		-moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1)
 		-o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1)
-		transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1)
+		transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1)	 
 	.cont-contact
 		height: $ventana
 		&:after
@@ -66,9 +67,17 @@ $ventana = calc(100vh - 103px)
 			height: 100%
 			color: #fff
 			font: italic 15px 'Libre Baskerville'
-			padding-left: 15%
-			height: 100%
 			right:1px
+			// padding-left: 15%
+			#centrado
+				display: table
+				margin: 20px auto
+				// background-color: red
+			#boton
+				border-radius: 6px
+				color: black
+				float: right
+				
 			
 			
 	@media screen and (max-width: 600px)

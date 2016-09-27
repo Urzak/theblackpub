@@ -8,20 +8,55 @@
         <div id="map"></div>
       </div>
 			<div class="right">
-				<br><br>
-				Make your reservation
-				<br><br>
-				<form>
-					<input class="input-css" placeholder="Name"></input><br><br>
-					<input class="input-css" placeholder="E-mail"></input><br><br>
-					<textarea class="input-css" placeholder="Message" rows="10"></textarea><br><br>
-				</form>
+  			<div id="centrado">
+  				Make your reservation
+  				<form style="width: 100%" id="reserve-day" method="post" action="views/mailto.php">
+            <input class="input-css" type="date" id="date" name="date">
+            <select class="input-css" id="hour" name="hour">
+              <option>6:00 p.m.</option>
+              <option>6:30 p.m.</option>
+              <option>7:00 p.m.</option>
+              <option>7:30 p.m.</option>
+            </select>
+  					<br><input class="input-css" placeholder="Name" id="name" name="name">
+  					<br><input class="input-css" placeholder="E-mail" id="email" name="email">
+  					<br><textarea class="input-css" placeholder="Message" rows="10" id="message" name="message"></textarea>
+            <br><input type="submit" id="boton" value="Reserve">
+          </form>
+        </div>
+        <div style="z-index: 890; padding-left: 40px">Plaza Solare Av. Sayil S/N, SM 6C, 77500 Cancún, dowtown</div>
 			</div>
 		</div>
 	</div>
 {% endblock %}
 
 {% block scripts %}
+  <script src="assets/js/jquery-2.2.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#reserve-day").on('submit', function(){
+        var that = $(this),
+        url = that.attr('action'),
+        type = that.attr('method'),
+        data = {};
+        that.find('[name]').each(function(index,value){
+          var that = $(this),
+          name = that.attr('name'),
+          value=that.val();
+          data[name]=value;
+        });
+        $.ajax({
+          url:url,
+          type:type,
+          data:data,
+          success:function(response){
+            console.log(response);
+          }
+        });
+        return false;
+      });
+    });
+  </script>
 	<script>
       function initMap() {
         var myLatLng = {lat: 21.149254244661698, lng: -86.82002848704722};
@@ -36,8 +71,8 @@
         // Create a marker and set its position.
         var imagen = {
         	url: 'assets/img/PIN.svg',
-        	size: new google.maps.Size(40, 52),
-        	anchor: new google.maps.Point(15,45)
+        	size: new google.maps.Size(30, 30),
+        	anchor: new google.maps.Point(10,35)
         }
         var marker = new google.maps.Marker({
           map: map,

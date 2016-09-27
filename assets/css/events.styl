@@ -24,7 +24,7 @@ $text-offset = calc($a-height - 90px)
 				width: 16.666%
 				height: $a-height
 				background-repeat: no-repeat
-				background-position: center bottom
+				background-position: center left
 				transition: all 500ms ease
 				text-align: center
 				div
@@ -44,6 +44,7 @@ $text-offset = calc($a-height - 90px)
 						color: #fff
 						text-decoration: none
 						transition: all 200ms ease
+						background: rgba(0, 0, 0, .6)
 						*
 							opacity: 0
 							margin: 0
@@ -65,10 +66,19 @@ $text-offset = calc($a-height - 90px)
 							margin-bottom: 2px
 							letter-spacing: -1px
 							// text-align: center
+							font-weight: bold
 						p
-							padding-top: 30px
-							font-size: 13.50px
+							padding-top: 25px
+							font-size: 20px
 							text-align: center
+							font-weight: bold
+							text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
+						#dosxuno
+							text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+						#decolor
+							color: #BFAB62
+							
+								
 			li:nth-child(1)
 				background-image: url("../assets/img/lunes.jpg")
 			li:nth-child(2)
@@ -87,7 +97,7 @@ $text-offset = calc($a-height - 90px)
 				&:hover
 					width: 60%
 					a
-						background: rgba(0, 0, 0, .4)
+						background: rgba(0, 0, 0, .2)
 						*
 							opacity: 1
 							-webkit-transform: translateX(0)

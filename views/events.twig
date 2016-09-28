@@ -1,7 +1,7 @@
 {% include 'index.twig' with {'var': 'events'} %}
 {% block content %}
 	{# <div class="container"> #}
-<div id="events">
+<div id="events" class="container">
 	<div class="accordion">
 		<ul>
 			<li>
@@ -17,7 +17,7 @@
 				<h2>TUESDAY</h2>
 					<p id="decolor">Martinis & Mezcal</p>
 					<p id="dosxuno">2 X 1</p>
-					<p id="decolor">¡Acoustic Sessions!</p>
+					<p id="decolor">¡Girls Trap!</p>
 					<p>8 to 2 a.m. </p>
 				</a> </div>
 			</li>
@@ -25,7 +25,7 @@
 				<div id="miercoles"> <a href="#miercoles">
 				<h2>WEDNESDAY</h2>
 					<p>Ladies Night</p>
-					<p id="decolor">Ron, Vodka, Tequila & Martinis.</p>
+					<p id="decolor">Ron, Vodka, <br>Tequila & Martinis.</p>
 					<p>¡Sweet Emotions!</p>
 					<p id="decolor">8 to 2 a.m. </p>
 				</a> </div>
@@ -34,7 +34,7 @@
 				<div id="jueves"> <a href="#jueves">
 				<h2>THURSDAY</h2>
 					<p>Caribean</p>
-					<p id="decolor">Margaritas, Mojitos, & Piñas Coladas</p>
+					<p id="decolor">Margaritas, Mojitos,<br> & Piñas Coladas</p>
 					<p id="dosxuno">2 X 1</p>
 					<p id="decolor">¡The Movil Band!</p>
 					<p>8 to 2 a.m. </p>
@@ -61,15 +61,4 @@
 	{# </div> #}
 {% endblock %}
 {% block scripts %}
-	<script>
-		$('#expandme1').mouseenter(function(){
-			$('#expandme1').animate({
-				"width": "100%"
-			},"slow");
-		}).mouseleave(function(){
-			$('#expandme1').animate({
-				"width": "16%"
-			},"slow");
-		});
-	</script>
 {% endblock %}

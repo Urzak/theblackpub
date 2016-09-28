@@ -1,30 +1,33 @@
 {% include 'index.twig' with {'var': 'contact'} %}
 {% block content %}
-	<div id="contact">
-		<div class="cont-contact">
-			<div class="left">
+  <div id="contact">
+    <div class="cont-contact">
+      <div class="left">
         <div id="line"></div>
         <div id="line2"></div>
         <div id="map"></div>
       </div>
-			<div class="right">
-  			<div id="centrado">
-  				Make your reservation
-  				<form style="width: 100%" id="reserve-day" method="post" action="views/mailto.php">
+      <div class="right">
+        <div id="centrado">
+          Make your reservation
+          <form style="width: 100%" id="reserve-day" method="post" action="views/mailto.php">
             <input class="input-css" type="date" id="date" name="date">
-            <select class="input-css" id="hour" name="hour">
+            <br><select class="input-css" id="hour" name="hour">
               <option>6:00 p.m.</option>
               <option>6:30 p.m.</option>
               <option>7:00 p.m.</option>
               <option>7:30 p.m.</option>
             </select>
-  					<br><input class="input-css" placeholder="Name" id="name" name="name">
-  					<br><input class="input-css" placeholder="E-mail" id="email" name="email">
-  					<br><textarea class="input-css" placeholder="Message" rows="10" id="message" name="message"></textarea>
+            <br><input class="input-css" placeholder="Name" id="name" name="name">
+            <br><input class="input-css" placeholder="E-mail" id="email" name="email">
+            <br><textarea class="input-css" placeholder="Message" rows="10" id="message" name="message"></textarea>
             <br><input type="submit" id="boton" value="Reserve">
           </form>
         </div>
         <div style="z-index: 890; padding-left: 40px">Plaza Solare Av. Sayil S/N, SM 6C, 77500 Cancún, dowtown</div>
+      <div class="llegar">
+        <a href="https://goo.gl/maps/APBwcDGds4K2">Get directions</a>
+      </div>
 			</div>
 		</div>
 	</div>

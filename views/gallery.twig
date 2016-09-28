@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block content %}
-	<div id="galeria">
+	<div id="galeria" class="container">
 		<div class="social-feed-container"></div>
 	</div>
 {% endblock %}
@@ -30,7 +30,7 @@
 			// FACEBOOK
 			facebook:{
 				accounts: ['@theblackpub'],
-				limit: 12,
+				limit: 19,
 				access_token: '548781405313550|9ff6b619e99b1f7dbfda9a0dda939667'
 			},
 
@@ -69,10 +69,11 @@
 				console.log("All posts collected!");
 				$(".social-feed-container").justifiedGallery({
 					rowHeight: 200,
-					lastRow: 'justify',
+					lastRow: 'hide',
 					margins: 5,
-					border: 70,
-					captions: true
+					border: -1,
+					captions: true,
+					// randomize: true
 				});
 			}
 		});

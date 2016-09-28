@@ -5,7 +5,7 @@ $text-offset = calc($a-height - 90px)
 	height: $a-height
 	.accordion
 		width: 100%
-		max-width: 1024px
+		// max-width: 1024px
 		height: $a-height
 		overflow: hidden
 		margin: 0 auto
@@ -24,7 +24,8 @@ $text-offset = calc($a-height - 90px)
 				width: 16.666%
 				height: $a-height
 				background-repeat: no-repeat
-				background-position: center left
+				background-position: center center
+				background-size: cover
 				transition: all 500ms ease
 				text-align: center
 				div
@@ -44,7 +45,7 @@ $text-offset = calc($a-height - 90px)
 						color: #fff
 						text-decoration: none
 						transition: all 200ms ease
-						background: rgba(0, 0, 0, .6)
+						background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0))
 						*
 							opacity: 0
 							margin: 0
@@ -54,14 +55,14 @@ $text-offset = calc($a-height - 90px)
 							z-index: 5
 							white-space: nowrap
 							overflow: hidden
-							-webkit-transform: translateX(-20px)
-							transform: translateX(-20px)
+							// -webkit-transform: translateX(0)
+							// transform: translateX(0)
 							-webkit-transition: all 400ms ease
 							transition: all 400ms ease
 						h2
 							text-overflow: clip
 							opacity: 1
-							font-size: 17.5px
+							font-size: 20px
 							text-transform: uppercase
 							margin-bottom: 2px
 							letter-spacing: -1px
@@ -69,10 +70,13 @@ $text-offset = calc($a-height - 90px)
 							font-weight: bold
 						p
 							padding-top: 25px
-							font-size: 20px
+							font-size: 30px
 							text-align: center
 							font-weight: bold
 							text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
+							+for_breakpoint(mobile)
+								font-size: 25px
+								
 						#dosxuno
 							text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
 						#decolor
@@ -97,11 +101,11 @@ $text-offset = calc($a-height - 90px)
 				&:hover
 					width: 60%
 					a
-						background: rgba(0, 0, 0, .2)
+						background: rgba(0, 0, 0, .1)
 						*
 							opacity: 1
-							-webkit-transform: translateX(0)
-							transform: translateX(0)
+							// -webkit-transform: translateX(0)
+							// transform: translateX(0)
 	@media screen and (max-width: 600px)
 		.accordion
 			height: auto
@@ -112,4 +116,4 @@ $text-offset = calc($a-height - 90px)
 					table-layout: fixed
 					width: 100%
 					-webkit-transition: none
-					transition: none								
+					transition: none

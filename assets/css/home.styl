@@ -1,9 +1,20 @@
 $h_slider = calc(100vh - 103px)
 $h_sliderMobile = calc(100vh - 58px)
 
-#slider
-	height $h_slider
-	+for_breakpoint(mobile)
-		height $h_sliderMobile
-	+for_breakpoint(tablet)
-		height $h_sliderMobile
+#home
+	#slider
+		height $h_slider
+		+for_breakpoint(mobile)
+			height $h_sliderMobile
+		+for_breakpoint(tablet)
+			height $h_sliderMobile
+		#txtSlider
+			font-size: 4em
+			+for_breakpoint(mobile)
+				font-size: 10.5em
+			p
+				text-align: center
+				line-height: 100%
+			#medium
+				font-size: .4em
+				

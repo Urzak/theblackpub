@@ -7,23 +7,31 @@
 {% endblock %}
 
 {% block content %}
-<div id="slider">
-    <div class="master-slider ms-skin-default" id="masterslider">    
-      {% for slide in local.slider %}
-          <div class="ms-slide">
-            <img src="assets/masterslider/style/blank.gif" data-src="{{ slide }}" />
+<div id="home">
+  <div id="slider">
+      <div class="master-slider ms-skin-default" id="masterslider">    
+        {% for slide in local.slider %}
+            <div class="ms-slide">
+              <img src="assets/masterslider/style/blank.gif" data-src="{{ slide }}" />
+            </div>
+        {% endfor %}
+        <div class="ms-slide">
+          <div class="ms-layer"></div>
+          <img src="assets/masterslider/style/blank.gif" data-src="assets/img/slider/imagen.png">
+          <div id="txtSlider" 
+            class="ms-layer ms-caption"
+            data-offset-y="30"
+            data-origin="bc"
+            data-type="text"
+            data-effect="bottom(90)"
+          >
+            <p id="large">MIÉRCOLES</p>
+            <p id="large">LADIES NIGHT</p>
+            <p id="medium">BARRA LIBRE PARA MUJERES</p>
           </div>
-      {% endfor %}
-      {# <div class="ms-slide">
-        <img src="assets/masterslider/style/blank.gif" data-src="http://placehold.it/1366x768"/>
+        </div>
       </div>
-      <div class="ms-slide">
-        <img src="assets/masterslider/style/blank.gif" data-src="http://placehold.it/1366x768"/>
-      </div>
-      <div class="ms-slide">
-        <img src="assets/masterslider/style/blank.gif" data-src="http://placehold.it/1366x768"/>
-      </div> #}
-    </div>
+  </div>
 </div>
 {% endblock %}
 
@@ -33,11 +41,11 @@
     <script type="text/javascript">
     var slider = new MasterSlider();
     slider.control('arrows');     
-    slider.control('scrollbar' , {dir:'h',color:'#333'});
+    // slider.control('scrollbar' , {dir:'h',color:'#333'});
     slider.setup('masterslider' , {
       width:1366,
       layout: "autofill",
-      fillMode: "stretch",
+      fillMode: "fill",
       space:0,
       view:'parallaxMask',
       keyboard: true,

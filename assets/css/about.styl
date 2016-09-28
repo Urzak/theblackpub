@@ -1,8 +1,11 @@
-$h_about = calc(100vh - 103px)
+$h_about = calc(100vh - 103px)	
 #about
 	display table
 	height $h_about
-	background-image: url('../assets/img/AboutUs1366x768.jpg')
+	background-image url('../assets/img/AboutUs1366x768.jpg')
+	background-position center bottom
+	+for_breakpoint(mobile)
+		background none
 	.margen
 		position relative
 		display table
@@ -27,9 +30,9 @@ $h_about = calc(100vh - 103px)
 		.text-about
 			margin-top 20px	
 			display table-cell
-			vertical-align middle
+			vertical-align bottom
 			text-align center
-			font-size 1.2em
+			font-size 1.1em
 			letter-spacing 1px
 		.q-1,.q-2,.q-3,.q-4
 			position absolute

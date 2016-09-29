@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "social-feed": "^0.1.2",
-    "justifiedGallery": "justified-gallery#^3.6.3"
+    "justifiedGallery": "justified-gallery#^3.6.3",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.42"
   }
 }

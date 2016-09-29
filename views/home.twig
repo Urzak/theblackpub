@@ -17,17 +17,52 @@
         {% endfor %}
         <div class="ms-slide">
           <div class="ms-layer"></div>
-          <img src="assets/masterslider/style/blank.gif" data-src="assets/img/slider/imagen.png">
+          <img src="assets/masterslider/style/blank.gif" data-src="assets/img/slider/barralibre.png">
           <div id="txtSlider" 
             class="ms-layer ms-caption"
             data-offset-y="30"
             data-origin="bc"
             data-type="text"
-            data-effect="bottom(90)"
+            data-effect="bottom(30)"
           >
             <p id="large">MIÉRCOLES</p>
             <p id="large">LADIES NIGHT</p>
-            <p id="medium">BARRA LIBRE PARA MUJERES</p>
+            <p id="small">BARRA LIBRE PARA MUJERES</p>
+          </div>
+        </div>
+        <div class="ms-slide">
+          <img src="assets/masterslider/style/blank.gif" data-src="assets/img/slider/bandas.png">
+          <div id="txtSlider" 
+            class="ms-layer ms-caption"
+            data-offset-y="30"
+            data-origin="mc"
+            data-type="text"
+            data-effect="top(30)"
+          >
+            <p id="large" class="bordered">MARTES - SABADO</p>
+            <p id="large">BANDAS EN VIVO</p>
+          </div>
+        </div>
+        <div class="ms-slide">
+          <img src="assets/masterslider/style/blank.gif" data-src="assets/img/slider/come.png">
+          <div id="txtSlider" 
+            class="ms-layer ms-caption"
+            data-offset-y="30"
+            data-origin="tc"
+            data-type="text"
+            data-effect="left(30)"
+          >
+            <p id="medium">VEN Y COME COMO</p>
+            <p id="large" class="bordered">#ROCKSTAR</p>
+          </div>
+          <div id="txtSlider" 
+            class="ms-layer ms-caption"
+            data-offset-y="30"
+            data-origin="br"
+            data-type="text"
+            data-effect="bottom(30)"
+          >
+            <button type="button" id="btnSlide" onClick="alert('menu')">VER MENÚ</button>
           </div>
         </div>
       </div>
@@ -41,7 +76,7 @@
     <script type="text/javascript">
     var slider = new MasterSlider();
     slider.control('arrows');     
-    // slider.control('scrollbar' , {dir:'h',color:'#333'});
+    slider.control('scrollbar' , {dir:'h',color:'#333'});
     slider.setup('masterslider' , {
       width:1366,
       layout: "autofill",
@@ -50,7 +85,8 @@
       view:'parallaxMask',
       keyboard: true,
       loop: true,
-      autoplay: true
+      autoplay: true,
+      swipe: false
     });
     </script>
 {% endblock %}

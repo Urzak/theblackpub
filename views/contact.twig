@@ -1,4 +1,7 @@
 {% include 'index.twig' with {'var': 'contact'} %}
+{% block styles %}
+  <link rel="stylesheet" type="text/css" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+{% endblock %}
 {% block content %}
   <div id="contact">
     <div class="cont-contact">
@@ -9,22 +12,21 @@
       </div>
       <div class="right">
         <div id="centrado">
-          Make your reservation
+          <p> Make your reservation </p>
           <form style="width: 100%" id="reserve-day" method="post" action="views/mailto.php">
-            <input class="input-css" type="date" id="date" name="date">
-            <br><select class="input-css" id="hour" name="hour">
-              <option>6:00 p.m.</option>
-              <option>6:30 p.m.</option>
-              <option>7:00 p.m.</option>
-              <option>7:30 p.m.</option>
-            </select>
-            <br><input class="input-css" placeholder="Name" id="name" name="name">
+            <div class='input-group date' id='datetimepicker1'>
+                <input type='text' class="form-control" placeholder="Date" name="date" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+            <input class="input-css" placeholder="Name" id="name" name="name">
             <br><input class="input-css" placeholder="E-mail" id="email" name="email">
             <br><textarea class="input-css" placeholder="Message" rows="10" id="message" name="message"></textarea>
             <br><input type="submit" id="boton" value="Reserve">
           </form>
         </div>
-        <div style="z-index: 890; padding-left: 40px">Plaza Solare Av. Sayil S/N, SM 6C, 77500 Cancún, dowtown</div>
+        <div style="padding-left: 40px; padding-top: 40px">Plaza Solare Av. Sayil S/N, SM 6C, 77500 Cancún, dowtown</div>
       <div class="llegar">
         <a href="https://goo.gl/maps/APBwcDGds4K2">Get directions</a>
       </div>
@@ -34,6 +36,7 @@
 {% endblock %}
 
 {% block scripts %}
+  <script src="bower_components/moment/min/moment.min.js"></script>
   <script src="assets/js/jquery-2.2.1.min.js"></script>
   <script>
     $(document).ready(function(){
@@ -88,4 +91,13 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3G6xUBUjX4zKAZKSUuvsOrnIyVWG-idE&callback=initMap"
         async defer></script>
+    <script src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $('#datetimepicker1').datetimepicker({
+          minDate: moment(),
+          // sideBySide: true
+        });
+      });
+    </script>
 {% endblock %}

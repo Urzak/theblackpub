@@ -56,13 +56,55 @@ $ventana = calc(100vh - 103px)
 			font: italic 15px 'Libre Baskerville'
 			// right:1px
 			// padding-left: 15%
+			#datetimepicker1
+				// color: black
+				width: 294px
+				-webkit-border-radius: 6px
+				border-radius: 6px
+				margin-top: 5px
+				border: 1px solid #b7b7b7
+				input 
+					font: italic 16px "Libre Baskerville", serif
+					background: rgba(5,4,4,1)
+					padding: 15px 20px 10px 20px
+					color: rgba(255,255,255,1)
+				.input-group-addon
+					background: none
+					color: #888787
+				.dropdown-menu
+					background-color: #000
+					border: 2px solid #b7b7b7
+					button
+						background-color: #000
+						border-color: #b7b7b7
+						&:hover
+							background-color: #b7b7b7
+					a
+						color: white
+					span
+						&:hover
+							background-color: #b7b7b7
+						&.active
+							background-color: #b7b7b7
+					th
+						&:hover
+							background-color: #b7b7b7
+						&.active
+							background-color: #b7b7b7
+					.datepicker-days
+						td
+							&:hover
+								background-color: #b7b7b7
+								color: white
+							&.active
+								background-color: #b7b7b7
 			#centrado
 				display: table
 				margin: 20px auto
 				// background-color: red
 				.input-css
 					display: inline-block
-					width: 100%
+					width: 250px
 					// direction: rtl
 					-webkit-box-sizing: content-box
 					-moz-box-sizing: content-box
@@ -84,12 +126,28 @@ $ventana = calc(100vh - 103px)
 					-moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1)
 					-o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1)
 					transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1)	 
+					&::-webkit-input-placeholder
+						color: #8B8A8A
+					&:-moz-placeholder
+						color: #8B8A8A
+					&::-moz-placeholder
+						color: #8B8A8A
+					&:-ms-input-placeholder
+						color: #8B8A8A
+				textarea
+					resize: none
 				#boton
+					width: 294px
+					background-color: rgba(0, 0, 0, .75)
 					border-radius: 6px
-					color: black
+					color: white
 					// float: right
 					font-size: 16px
 					padding: 6px 10px
+					// border: 2px solid #b7b7b7 
+					&:hover
+						background-color: #b7b7b7
+						color: black
 				
 			
 			

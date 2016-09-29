@@ -1,10 +1,9 @@
 <?php
 	require_once '../vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 	require '../vendor/autoload.php';
-	if (isset($_POST['date'], $_POST['hour'], $_POST['name'], $_POST['email'], $_POST['message'])) {
+	if (isset($_POST['date'], $_POST['name'], $_POST['email'], $_POST['message'])) {
 		$fields = [
 			'date' => $_POST['name'],
-			'hour' => $_POST['hour'],
 			'name' => $_POST['name'],
 			'email' => $_POST['email'],
 			'message' => $_POST['message']
@@ -28,7 +27,7 @@
 		$m -> isHTML();
 
 		$m -> Subject = 'RESERVA BLACK PUB';
-		$m -> Body = 'From:' . $fields['name'] . '(' . $fields['email'] . ')'  . '<p><b>date:</b><br/>' . $fields['date'] . '<p><b>hour:</b><br/>' . $fields['hour'] . '</p>' . '<p><b>Message</b><br/>' . $fields['message'] . '</p>';
+		$m -> Body = 'From:' . $fields['name'] . '(' . $fields['email'] . ')'  . '<p><b>date:</b><br/>' . $fields['date'] . '</p>' . '<p><b>Message</b><br/>' . $fields['message'] . '</p>';
 		$m -> AddAddress('luanzeir@gmail.com', 'Luis');
 
 		if ($m -> send()) {

@@ -1,0 +1,22 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  Social Astronauts S.A. de C.V. && Gloobe.Co
+  socialastronauts.com
+
+  Luis Angel Zetina Irola
+  Jose Enrique Castro
+  Armando Díaz
+
+# THANKS
+    And the good vibes
+
+# TECHNOLOGY COLOPHON
+    HTML5, CSS3
+    jQuery, Modernizr
+    Stylus
+    Gulp
+    Bower
+    Bootstrap
